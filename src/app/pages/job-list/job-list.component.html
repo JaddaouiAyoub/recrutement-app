@@ -1,0 +1,9 @@
+<div class="p-4">
+  <h2 class="text-2xl font-semibold">Liste des offres d'emploi</h2>
+  <div *ngFor="let job of jobs" class="mt-4 p-4 border rounded shadow">
+    <h3 class="text-xl font-bold">{{ job.title }}</h3>
+    <p class="text-sm text-gray-600">{{ job.company }} - {{ job.location }}</p>
+    <p class="mt-2">{{ job.description }}</p>
+    <a [routerLink]="'/jobs/' + job.id" class="text-primary mt-4 block">Voir les détails</a>
+  </div>
+</div>
